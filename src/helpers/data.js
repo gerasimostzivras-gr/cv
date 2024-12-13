@@ -19,13 +19,13 @@ export const skillData = [
   { skill: "SQL", level: 30, colors: "bg-orange-100 text-orange-800" },
   {
     skill: "User Interface Design",
-    level: 40,
+    level: 30,
     colors: "bg-pink-100 text-pink-800",
   },
 
   {
     skill: "Technical Writing",
-    level: 60,
+    level: 65,
     colors: "bg-orange-100 text-orange-800",
   },
 ];
@@ -34,33 +34,49 @@ export const projectsData = [
   {
     name: "A-Aagora",
     description:
-      "Developed a full-stack web application leveraging AI to optimize task workflows. Implemented machine learning algorithms for task prioritization and time estimation.",
-    skills: ["React", "Node.js", "Machine Learning", "TypeScript", "MongoDB"],
+      "Rapidly learned Next.js to build the entire frontend, including an interactive map. Currently optimizing the project’s SEO. Advised partners on the UI structure.",
+    skills: ["Next.js", "Frontend Development", "JavaScript", "Tailwind CSS"],
   },
   {
-    name: "E-commerce Analytics Dashboard",
+    name: "Team Manager 2",
     description:
-      "Created a comprehensive analytics solution with interactive visualizations. Provided real-time insights into sales performance, customer behavior, and revenue trends.",
-    skills: ["React", "Python", "Data Visualization", "Docker", "SQL"],
+      "Ongoing Personal Project to learn Express JS, in the process of being refactored for Python and Django",
+    skills: [
+      "React.js",
+      "Frontend Development",
+      "JavaScript",
+      "Node.js",
+      "Express.js",
+      "Python",
+      "SQL",
+      "Tailwind CSS",
+    ],
+  },
+  {
+    name: "Oncoscreen",
+    description:
+      "Supported research innovation: Developed a frontend for the OncoScreen project based on doctor-provided assumptions, facilitating early-stage research.",
+    skills: ["React.js", "Frontend Development", "JavaScript", "Tailwind CSS"],
+  },
+  {
+    name: "Search & Rescue",
+    description:
+      "Accelerated project timelines: As a junior ReactJs developer, I completed all required frontend components for the SnR R&D project within three months, resolving significant development delays.",
+    skills: ["React.js", "Frontend Development", "JavaScript"],
   },
 ];
 
-export const skillColorMap = [
-  {
-    "Frontend Development": "bg-blue-100 text-blue-800",
-  },
-  { "React.js": "bg-blue-100 text-blue-800" },
-  { JavaScript: "bg-yellow-100 text-yellow-800" },
-  { "Next.js": "bg-indigo-100 text-indigo-800" },
-  { TypeScript: "bg-indigo-100 text-indigo-800" },
-  { "Tailwind CSS": "bg-cyan-100 text-cyan-800" },
-  { "Node.js": "bg-blue-100 text-blue-800" },
-  { "Express.js": "bg-green-100 text-green-800" },
-  { Python: "bg-purple-100 text-purple-800" },
-  { SQL: "bg-orange-100 text-orange-800" },
-  {
-    "User Interface Design": "bg-pink-100 text-pink-800",
-  },
-
-  { "Technical Writing": "bg-orange-100 text-orange-800" },
-];
+export const skillColorMap = {
+  "Frontend Development": "bg-blue-100 text-blue-800",
+  "React.js": "bg-blue-100 text-blue-800",
+  JavaScript: "bg-yellow-100 text-yellow-800",
+  "Next.js": "bg-indigo-100 text-indigo-800",
+  TypeScript: "bg-indigo-100 text-indigo-800",
+  "Tailwind CSS": "bg-cyan-100 text-cyan-800",
+  "Node.js": "bg-blue-100 text-blue-800",
+  "Express.js": "bg-green-100 text-green-800",
+  Python: "bg-purple-100 text-purple-800",
+  SQL: "bg-orange-100 text-orange-800",
+  "User Interface Design": "bg-pink-100 text-pink-800",
+  "Technical Writing": "bg-orange-100 text-orange-800",
+};
