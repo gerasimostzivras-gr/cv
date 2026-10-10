@@ -2,7 +2,7 @@
 export default function Footer() {
   return (
     // <footer className="text-center p-4 text-gray-600 text-sm italic flex items-center justify-center">
-    <footer className="fixed right-0 bottom-0 flex items-center justify-center p-3">
+    <footer className="absolute right-0 bottom-0 flex items-center justify-center gap-2 p-3">
       <svg
         className="size-5"
         xmlns="http://www.w3.org/2000/svg"

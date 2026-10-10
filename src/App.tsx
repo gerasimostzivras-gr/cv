@@ -1,18 +1,16 @@
-import MainContent from "./components/MainContent";
-import Sidebar from "./components/Sidebar";
-import Footer from "./components/Footer";
+import Page from "./components/Page";
+import Sidebar, { SidebarCompact } from "./components/Sidebar";
+import { PageOneContent, PageTwoContent } from "./components/MainContent";
 
 export default function App() {
   return (
-    <>
-      <main className="max-w-4xl mx-auto grid grid-cols-3 bg-white text-xs print:text-xs print:m-0 print:p-0 print:max-w-full h-screen print:h-full overflow-hidden">
-        {/* Blue Sidebar */}
-        <Sidebar />
-
-        {/* Main Content */}
-        <MainContent />
-      </main>
-      <Footer />
-    </>
+    <div className="flex flex-row flex-wrap justify-center items-start gap-6 w-full p-6 print:flex-col print:flex-nowrap print:items-stretch print:gap-0 print:p-0">
+      <Page sidebar={<Sidebar />}>
+        <PageOneContent />
+      </Page>
+      <Page sidebar={<SidebarCompact />}>
+        <PageTwoContent />
+      </Page>
+    </div>
   );
 }

@@ -1,9 +1,16 @@
 @import "tailwindcss";
 
+@page {
+  size: A4;
+  margin: 0;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
 }
 
 body {
@@ -11,9 +18,27 @@ body {
   display: flex;
   min-width: 320px;
   min-height: 100vh;
+  background: var(--color-gray-200);
 }
 
 a {
   all: unset;
   cursor: pointer;
+}
+
+@media print {
+  body {
+    display: block;
+    min-height: 0;
+    background: white;
+  }
+
+  .page {
+    break-inside: avoid;
+    break-after: page;
+  }
+
+  .page:last-child {
+    break-after: auto;
+  }
 }

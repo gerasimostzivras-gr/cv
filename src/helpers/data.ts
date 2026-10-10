@@ -1,96 +1,173 @@
-export interface Skill {
-  skill: string;
-  level: number;
-  colors: string;
-}
-
 export interface Project {
   name: string;
   description: string;
-  skills: string[];
+  skills: SkillName[];
+  startYear: number;
+  // Omitted when the project is ongoing.
+  endYear?: number;
 }
 
-export const skillData: Skill[] = [
-  {
-    skill: "Frontend Development",
-    level: 90,
-    colors: "bg-blue-100 text-blue-800",
-  },
-  { skill: "React.js", level: 90, colors: "bg-blue-100 text-blue-800" },
-  { skill: "JavaScript", level: 85, colors: "bg-yellow-100 text-yellow-800" },
-  { skill: "Next.js", level: 40, colors: "bg-indigo-100 text-indigo-800" },
-  { skill: "TypeScript", level: 40, colors: "bg-indigo-100 text-indigo-800" },
-  {
-    skill: "Tailwind CSS",
-    level: 95,
-    colors: "bg-cyan-100 text-cyan-800",
-  },
-  { skill: "Node.js", level: 40, colors: "bg-blue-100 text-blue-800" },
-  { skill: "Express.js", level: 40, colors: "bg-green-100 text-green-800" },
-  { skill: "Python", level: 30, colors: "bg-purple-100 text-purple-800" },
-  { skill: "SQL", level: 30, colors: "bg-orange-100 text-orange-800" },
-  {
-    skill: "User Interface Design",
-    level: 30,
-    colors: "bg-pink-100 text-pink-800",
-  },
+export function formatProjectDates({ startYear, endYear }: Project) {
+  if (endYear === undefined) return `${startYear} – Ongoing`;
+  if (endYear === startYear) return `${startYear}`;
+  return `${startYear} – ${endYear}`;
+}
 
-  {
-    skill: "Technical Writing",
-    level: 65,
-    colors: "bg-orange-100 text-orange-800",
-  },
-];
+// Ordered by importance.
+export const coreSkills = [
+  "Next.js",
+  "React.js",
+  "TypeScript",
+  "JavaScript",
+  "Tailwind CSS",
+  "CSS",
+  "Frontend Development",
+] satisfies SkillName[];
+
+export const additionalSkills = [
+  "Technical Writing",
+  "UI/UX",
+  "Claude Code",
+  "Web Accessibility (WCAG 2.1 AA)",
+  "Web Performance Optimization",
+  "React-Leaflet",
+  "Zustand",
+  "Redux",
+  "Bootstrap",
+  "SQL",
+  "Node.js",
+  "Express.js",
+  "Python",
+] satisfies SkillName[];
 
 export const projectsData: Project[] = [
   {
-    name: "A-Aagora",
+    name: "GenAI4ED",
+    startYear: 2025,
     description:
-      "Rapidly learned Next.js to build the entire frontend, including an interactive map. Currently optimizing the project’s SEO. Advised partners on the UI structure.",
-    skills: ["Next.js", "Frontend Development", "JavaScript", "Tailwind CSS"],
-  },
-  {
-    name: "Team Manager 2",
-    description:
-      "Ongoing Personal Project to learn Express JS, in the process of being refactored for Python and Django",
+      "EU-funded platform promoting AI literacy, critical thinking, and responsible generative AI use among students, teachers, and parents. I developed the entire frontend for students and parents, implemented multilingual UI support and accessibility improvements targeting WCAG 2.1 AA, and optimized frontend performance. I used Claude Code to automate repetitive workflow tasks and speed up code implementation.",
     skills: [
-      "React.js",
-      "Frontend Development",
-      "JavaScript",
-      "Node.js",
-      "Express.js",
-      "Python",
-      "SQL",
+      "Next.js",
+      "TypeScript",
       "Tailwind CSS",
+      "Zustand",
+      "Frontend Development",
+      "Web Accessibility (WCAG 2.1 AA)",
+      "Web Performance Optimization",
+      "Claude Code",
     ],
   },
   {
-    name: "Oncoscreen",
+    name: "A-AAGORA",
+    startYear: 2024,
+    endYear: 2026,
     description:
-      "Supported research innovation: Developed a frontend for the OncoScreen project based on doctor-provided assumptions, facilitating early-stage research.",
-    skills: ["React.js", "Frontend Development", "JavaScript", "Tailwind CSS"],
+      "European research project restoring marine and coastal ecosystems through nature-based solutions, environmental monitoring, and digital knowledge-sharing tools. I developed the entire frontend of its Digital Knowledge System (DKS), including an interactive map using React-Leaflet. I optimized SEO, performance, responsiveness, and accessibility, and advised project partners on UI structure and UI/UX matters.",
+    skills: [
+      "Next.js",
+      "JavaScript",
+      "Tailwind CSS",
+      "React-Leaflet",
+      "Frontend Development",
+      "Web Accessibility (WCAG 2.1 AA)",
+      "Web Performance Optimization",
+      "UI/UX",
+    ],
+  },
+  {
+    name: "IT4EST",
+    startYear: 2025,
+    endYear: 2025,
+    description:
+      "European research project developing digital technologies and decision-support tools for forest management, wildfire prevention, and emergency response. I bridged the existing COncORDE React application and the forest management requirements, determining how the initial requirements would fit its architecture within an MVP scope while the UI/UX team finalized the design. I also prepared the application for the Next.js transition by identifying technical debt, documenting user flows and functional issues, and mapping components requiring refactoring to guide the development team's two-week effort.",
+    skills: [
+      "Tailwind CSS",
+      "JavaScript",
+      "Frontend Development",
+      "Technical Writing",
+    ],
+  },
+  {
+    name: "ONCOSCREEN",
+    startYear: 2023,
+    endYear: 2025,
+    description:
+      "European healthcare research project developing AI-assisted screening technologies and Decision Support Systems (DSS) to support personalized risk assessment and early detection of colorectal cancer. I set up the frontend application and developed the majority of its frontend features, including data visualizations and multilingual UI support. I refactored other junior developers' implementations and reviewed their code.",
+    skills: [
+      "React.js",
+      "JavaScript",
+      "Tailwind CSS",
+      "Zustand",
+      "Frontend Development",
+    ],
+  },
+  {
+    name: "KYKLOS 4.0",
+    startYear: 2022,
+    endYear: 2023,
+    description:
+      "European industrial research project integrating AI, IoT, and Decision Support Systems (DSS) to optimize manufacturing processes, resource efficiency, and sustainable production. I delivered the frontend one month ahead of schedule under tight deadlines. I implemented user information workflows and contributed to UI/UX decisions in the absence of a dedicated design team.",
+    skills: [
+      "React.js",
+      "JavaScript",
+      "Frontend Development",
+      "UI/UX",
+    ],
   },
   {
     name: "Search & Rescue",
+    startYear: 2022,
+    endYear: 2023,
     description:
-      "Accelerated project timelines: As a junior ReactJs developer, I completed all required frontend components for the SnR R&D project within three months, resolving significant development delays.",
-    skills: ["React.js", "Frontend Development", "JavaScript"],
+      "EU-funded project developing COncORDE, an integrated crisis management platform with decision support for disaster response, emergency coordination, and first responder safety. I developed all assigned frontend components for COncORDE 2.0 within three months, helping resolve significant project delays. I resolved memory leaks and critical authorization and authentication bugs in Redux, and updated legacy code to modern standards.",
+    skills: [
+      "React.js",
+      "JavaScript",
+      "Redux",
+      "CSS",
+      "Bootstrap",
+      "Frontend Development",
+    ],
+  },
+  {
+    name: "NAIADES",
+    startYear: 2022,
+    endYear: 2022,
+    description:
+      "European research project developing smart water management solutions using IoT, data analytics, and digital monitoring technologies to improve water efficiency and sustainability. I worked on the Human-Machine Interface (HMI), developing responsive interfaces and data visualizations while also helping integrate the frontend with backend APIs. I also helped adapt the integrations to significant changes in the backend API and data structure just one month before the project's final review.",
+    skills: [
+      "React.js",
+      "JavaScript",
+      "CSS",
+      "Bootstrap",
+      "Frontend Development",
+    ],
   },
 ];
 
 export const skillColorMap = {
-  "Frontend Development": "bg-blue-100 text-blue-800",
-  "React.js": "bg-blue-100 text-blue-800",
+  // One distinct color per skill. The last three are not shown as badges, so
+  // they use solid shades once the 17 pastel hues run out.
+  "Frontend Development": "bg-teal-100 text-teal-800",
+  "React.js": "bg-sky-100 text-sky-800",
   JavaScript: "bg-yellow-100 text-yellow-800",
   "Next.js": "bg-indigo-100 text-indigo-800",
-  TypeScript: "bg-indigo-100 text-indigo-800",
+  TypeScript: "bg-blue-100 text-blue-800",
   "Tailwind CSS": "bg-cyan-100 text-cyan-800",
-  "Node.js": "bg-blue-100 text-blue-800",
-  "Express.js": "bg-green-100 text-green-800",
-  Python: "bg-purple-100 text-purple-800",
-  SQL: "bg-orange-100 text-orange-800",
-  "User Interface Design": "bg-pink-100 text-pink-800",
-  "Technical Writing": "bg-orange-100 text-orange-800",
-};
+  CSS: "bg-lime-100 text-lime-800",
+  Bootstrap: "bg-purple-100 text-purple-800",
+  Redux: "bg-fuchsia-100 text-fuchsia-800",
+  Zustand: "bg-orange-100 text-orange-800",
+  "React-Leaflet": "bg-green-100 text-green-800",
+  "Node.js": "bg-green-700 text-white",
+  "Express.js": "bg-slate-600 text-white",
+  Python: "bg-red-100 text-red-800",
+  SQL: "bg-orange-700 text-white",
+  "UI/UX": "bg-pink-100 text-pink-800",
+  "Technical Writing": "bg-rose-100 text-rose-800",
+  "Web Accessibility (WCAG 2.1 AA)": "bg-emerald-100 text-emerald-800",
+  "Web Performance Optimization": "bg-amber-100 text-amber-800",
+  "Claude Code": "bg-violet-100 text-violet-800",
+} as const;
 
 export type SkillName = keyof typeof skillColorMap;
