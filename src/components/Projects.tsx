@@ -18,7 +18,7 @@ export default function Projects({
   return (
     <Section title={title}>
       {projects.map((project, index) => (
-        <div key={index} className="mb-2">
+        <div key={index} className="mb-3">
           <div className="flex justify-between">
             <h3 className="font-bold text-blue-800 text-xs">{project.name}</h3>
             <span className="text-gray-600 text-xs">
