@@ -6,12 +6,13 @@ export default function Education() {
       <div>
         <div className="flex justify-between">
           <h3 className="font-bold text-blue-800 text-xs">
-            Bachelor of Science in Molecular Biology
+            Bachelor of Biology
           </h3>
           <span className="text-gray-600 text-xs">Graduated in 2022</span>
         </div>
         <p className="text-gray-700 text-xs">
-          University of Crete, Heraklion Campus
+          University of Crete, School of Science and Technology, Biology
+          Department
         </p>
       </div>
     </Section>
