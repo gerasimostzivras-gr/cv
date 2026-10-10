@@ -21,7 +21,6 @@ export const coreSkills = [
   "JavaScript",
   "Tailwind CSS",
   "CSS",
-  "Frontend Development",
 ] satisfies SkillName[];
 
 export const additionalSkills = [
@@ -51,7 +50,6 @@ export const projectsData: Project[] = [
       "TypeScript",
       "Tailwind CSS",
       "Zustand",
-      "Frontend Development",
       "Web Accessibility (WCAG 2.1 AA)",
       "Web Performance Optimization",
       "Claude Code",
@@ -68,7 +66,6 @@ export const projectsData: Project[] = [
       "JavaScript",
       "Tailwind CSS",
       "React-Leaflet",
-      "Frontend Development",
       "Web Accessibility (WCAG 2.1 AA)",
       "Web Performance Optimization",
       "UI/UX",
@@ -83,7 +80,6 @@ export const projectsData: Project[] = [
     skills: [
       "Tailwind CSS",
       "JavaScript",
-      "Frontend Development",
       "Technical Writing",
     ],
   },
@@ -98,7 +94,6 @@ export const projectsData: Project[] = [
       "JavaScript",
       "Tailwind CSS",
       "Zustand",
-      "Frontend Development",
     ],
   },
   {
@@ -110,7 +105,6 @@ export const projectsData: Project[] = [
     skills: [
       "React.js",
       "JavaScript",
-      "Frontend Development",
       "UI/UX",
     ],
   },
@@ -126,7 +120,6 @@ export const projectsData: Project[] = [
       "Redux",
       "CSS",
       "Bootstrap",
-      "Frontend Development",
     ],
   },
   {
@@ -140,15 +133,13 @@ export const projectsData: Project[] = [
       "JavaScript",
       "CSS",
       "Bootstrap",
-      "Frontend Development",
     ],
   },
 ];
 
 export const skillColorMap = {
   // One distinct color per skill. The last three are not shown as badges, so
-  // they use solid shades once the 17 pastel hues run out.
-  "Frontend Development": "bg-teal-100 text-teal-800",
+  // they use solid shades once the 16 pastel hues run out.
   "React.js": "bg-sky-100 text-sky-800",
   JavaScript: "bg-yellow-100 text-yellow-800",
   "Next.js": "bg-indigo-100 text-indigo-800",
@@ -158,7 +149,7 @@ export const skillColorMap = {
   Bootstrap: "bg-purple-100 text-purple-800",
   Redux: "bg-fuchsia-100 text-fuchsia-800",
   Zustand: "bg-orange-100 text-orange-800",
-  "React-Leaflet": "bg-green-100 text-green-800",
+  "React-Leaflet": "bg-gray-200 text-gray-800",
   "Node.js": "bg-green-700 text-white",
   "Express.js": "bg-slate-600 text-white",
   Python: "bg-red-100 text-red-800",
