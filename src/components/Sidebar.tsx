@@ -1,4 +1,5 @@
-import { AtSign, Phone, Linkedin, Github, MapPin } from "lucide-react";
+import { AtSign, Phone, Link, MapPin } from "lucide-react";
+import { SiGithub } from "@icons-pack/react-simple-icons";
 import { skillData } from "../helpers/data";
 import profilePictrue from "../assets/images/profile.png";
 
@@ -30,7 +31,7 @@ export default function Sidebar() {
           <span>+30 69 090 38 403</span>
         </div>
         <div className="flex items-center">
-          <Linkedin size={12} className="mr-2" />
+          <Link size={12} className="mr-2" />
           <span>
             <a
               href="https://www.linkedin.com/in/gerasimos-tzivras-53ba57305/"
@@ -42,7 +43,7 @@ export default function Sidebar() {
           </span>
         </div>
         <div className="flex items-center">
-          <Github size={12} className="mr-2" />
+          <SiGithub size={12} className="mr-2" />
           <span>
             <a
               href="https://github.com/gerasimostzivras-gr"

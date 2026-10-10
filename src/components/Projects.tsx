@@ -1,4 +1,4 @@
-import { skillColorMap, projectsData } from "../helpers/data";
+import { skillColorMap, projectsData, type SkillName } from "../helpers/data";
 import Section from "./Section";
 
 export default function Projects() {
@@ -15,8 +15,8 @@ export default function Projects() {
             {project.skills.map((skill, skillIndex) => (
               <span
                 key={skillIndex}
-                className={`px-1 py-0.5 rounded text-[0.6rem] ${
-                  skillColorMap[skill] || "bg-gray-100 text-gray-800"
+                className={`px-1 py-0.5 rounded-sm text-[0.6rem] ${
+                  skillColorMap[skill as SkillName] || "bg-gray-100 text-gray-800"
                 }`}
               >
                 {skill}

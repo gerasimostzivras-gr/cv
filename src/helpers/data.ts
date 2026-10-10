@@ -1,4 +1,16 @@
-export const skillData = [
+export interface Skill {
+  skill: string;
+  level: number;
+  colors: string;
+}
+
+export interface Project {
+  name: string;
+  description: string;
+  skills: string[];
+}
+
+export const skillData: Skill[] = [
   {
     skill: "Frontend Development",
     level: 90,
@@ -30,7 +42,7 @@ export const skillData = [
   },
 ];
 
-export const projectsData = [
+export const projectsData: Project[] = [
   {
     name: "A-Aagora",
     description:
@@ -80,3 +92,5 @@ export const skillColorMap = {
   "User Interface Design": "bg-pink-100 text-pink-800",
   "Technical Writing": "bg-orange-100 text-orange-800",
 };
+
+export type SkillName = keyof typeof skillColorMap;
